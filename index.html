@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電腦硬體架構指南 - 互動式導覽</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">3D電腦硬體介紹網站</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>探索電腦的核心</h1>
+            <p>透過互動式視覺導覽，深入了解電腦硬體的運作原理與各個組件。</p>
+        </section>
+
+        <!-- 3D Model Section -->
+        <section class="container" style="margin-bottom: 2rem;">
+            <div class="glass-panel" style="padding: 0; overflow: hidden; height: 600px; position: relative;">
+                <iframe src="https://buildcores.com/builds/aqE2k6R7F" style="width: 100%; height: 100%; border: none;"
+                    title="3D Computer Model"></iframe>
+                <div
+                    style="position: absolute; bottom: 10px; right: 10px; font-size: 0.8rem; color: rgba(255,255,255,0.5); pointer-events: none;">
+                    Powered by BuildCores
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 1rem; color: var(--text-muted);">
+                上方為 3D 主機模型，您可以旋轉、縮放來觀察內部構造。
+            </p>
+        </section>
+
+        <!-- Component Grid Navigation -->
+        <section class="container">
+            <h2 style="margin-bottom: 1.5rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">硬體元件導覽
+            </h2>
+            <div class="component-grid">
+                <!-- Row 1 -->
+                <a href="case.html" class="grid-item">
+                    <img src="case.png" alt="機殼圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>Case</h3>
+                        <p>機殼</p>
+                    </div>
+                </a>
+                <a href="cpu.html" class="grid-item">
+                    <img src="cpu.png" alt="CPU圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>CPU</h3>
+                        <p>中央處理器</p>
+                    </div>
+                </a>
+                <a href="motherboard.html" class="grid-item">
+                    <img src="motherboard.png" alt="主機板圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>Motherboard</h3>
+                        <p>主機板</p>
+                    </div>
+                </a>
+
+                <!-- Row 2 -->
+                <a href="gpu.html" class="grid-item">
+                    <img src="gpu.png" alt="GPU圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>GPU</h3>
+                        <p>顯示卡</p>
+                    </div>
+                </a>
+                <a href="ram.html" class="grid-item">
+                    <img src="ram.png" alt="記憶體圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>RAM</h3>
+                        <p>記憶體</p>
+                    </div>
+                </a>
+                <a href="cooling.html" class="grid-item">
+                    <img src="cpu cooler.png" alt="CPU散熱器圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>CPU Cooler</h3>
+                        <p>CPU 散熱器</p>
+                    </div>
+                </a>
+
+                <!-- Row 3 -->
+                <a href="storage.html" class="grid-item">
+                    <img src="storage.png" alt="硬碟圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>Storage</h3>
+                        <p>硬碟</p>
+                    </div>
+                </a>
+                <a href="psu.html" class="grid-item">
+                    <img src="power supply.png" alt="電源圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>PSU</h3>
+                        <p>電源供應器</p>
+                    </div>
+                </a>
+                <a href="case-fan.html" class="grid-item">
+                    <img src="case fan.png" alt="風扇圖示" class="grid-icon-img">
+                    <div class="grid-info">
+                        <h3>Case Fan</h3>
+                        <p>機殼風扇</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="container features-grid">
+            <div class="glass-panel feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>視覺化學習</h3>
+                <p>透過高解析度圖解與 3D 模型，直觀理解硬體構造。</p>
+            </div>
+            <div class="glass-panel feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>元件比較</h3>
+                <p>詳細規格對比，了解不同等級硬體的差異。</p>
+            </div>
+            <div class="glass-panel feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>系統架構</h3>
+                <p>深入資料流向與各部位協同運作的原理。</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南 | 期末專案作品</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

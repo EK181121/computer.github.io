@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU 散熱器 - 電腦硬體架構指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 400px;
+            filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .detail-info {
+            flex: 1.5;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 3px solid #00f2ff;
+        }
+
+        .info-section h2 {
+            color: #00f2ff;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">HardWare.IO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detail-hero">
+            <div class="detail-info">
+                <h1>CPU 散熱器 (CPU Cooler)</h1>
+                <p class="subtitle" style="color: var(--text-muted); font-size: 1.2rem;">Thermal Solution - 核心的守護者</p>
+            </div>
+            <img src="cpu cooler.png" alt="CPU Cooler Image" class="detail-img">
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h2>基本定義</h2>
+                <p>CPU 散熱器的專一目標是迅速將中央處理器 (CPU) 在高速運算時產生的廢熱移除，防止核心過熱降頻或損壞。</p>
+            </div>
+
+            <div class="info-section">
+                <h2>功能說明</h2>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li><strong>熱傳導：</strong> 透過導熱膏與金屬底座，將 CPU 表面熱量傳導至散熱器。</li>
+                    <li><strong>空冷 (Air Cooling)：</strong> 利用熱導管將熱量傳至鰭片，再由風扇吹走。</li>
+                    <li><strong>水冷 (Liquid Cooling)：</strong> 利用水冷液循環將熱量帶到冷排散發，效率通常較高。</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>系統角色與交互關係</h2>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">防止過熱降頻 (Throttling)</h3>
+                        <p>CPU 持續高效運作的關鍵。如果散熱器效能不足，CPU 用到一半就會因為溫度撞牆而強制變慢。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="glass-panel" style="display: inline-block;">← 返回首頁導覽</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南</p>
+    </footer>
+</body>
+
+</html>

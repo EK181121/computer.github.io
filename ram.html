@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記憶體 (RAM) - 電腦硬體架構指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 450px;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .detail-info {
+            flex: 1.5;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 3px solid #00ff88;
+        }
+
+        .info-section h2 {
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">HardWare.IO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detail-hero">
+            <div class="detail-info">
+                <h1>記憶體 (RAM)</h1>
+                <p class="subtitle" style="color: var(--text-muted); font-size: 1.2rem;">Random Access Memory - 極速工作區
+                </p>
+            </div>
+            <img src="ram.png" alt="RAM Image" class="detail-img">
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h2>基本定義</h2>
+                <p>RAM (隨機存取記憶體) 是電腦的短期記憶區。它存放 CPU 當前正在使用的作業系統、應用程式和資料，以便 CPU 能以極快的速度存取。</p>
+            </div>
+
+            <div class="info-section">
+                <h2>功能說明</h2>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li><strong>高速讀寫：</strong> 速度比硬碟 (SSD/HDD) 快上百倍。</li>
+                    <li><strong>揮發性儲存：</strong> RAM 需要電力來維持資料，一旦關機或斷電，資料就會消失。</li>
+                    <li><strong>多工處理基礎：</strong> 容量越大，您可以同時開啟的程式或分頁就越多。</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>系統角色與交互關係</h2>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">硬碟與 CPU 的橋樑</h3>
+                        <p>硬碟像是一個巨大的倉庫（慢但大），CPU 是工匠（快）。RAM 就是工作桌，先把東西從倉庫搬到桌上，工匠才能快速工作。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="glass-panel" style="display: inline-block;">← 返回首頁導覽</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南</p>
+    </footer>
+</body>
+
+</html>

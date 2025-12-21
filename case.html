@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>機殼 (Case) - 電腦硬體架構指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 450px;
+            filter: drop-shadow(0 0 20px rgba(100, 100, 100, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .detail-info {
+            flex: 1.5;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 3px solid #888888;
+        }
+
+        .info-section h2 {
+            color: #aaaaaa;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">HardWare.IO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detail-hero">
+            <div class="detail-info">
+                <h1>機殼 (Case)</h1>
+                <p class="subtitle" style="color: var(--text-muted); font-size: 1.2rem;">Computer Chassis - 硬體之家</p>
+            </div>
+            <img src="case.png" alt="PC Case" class="detail-img">
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h2>基本定義</h2>
+                <p>機殼是承載所有電腦硬體的框架。它保護內部精密的電子元件免受灰塵、液體和物理撞擊的損害，同時提供結構支撐。</p>
+            </div>
+
+            <div class="info-section">
+                <h2>功能說明</h2>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li><strong>保護與結構：</strong> 穩固地安裝主機板、電源、硬碟等元件。</li>
+                    <li><strong>風流引導 (Airflow)：</strong> 設計良好的機殼能引導冷空氣進入、熱空氣排出，避免熱量堆積。</li>
+                    <li><strong>I/O 擴充：</strong> 提供前置 USB 插槽、耳機孔、開機鍵等方便操作的介面。</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>系統角色與交互關係</h2>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">散熱的基礎</h3>
+                        <p>一個擁有良好散熱孔位與風道設計的機殼，能讓 cpu 散熱器與顯卡風扇運作得更有效率，從而提升電腦整體效能。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="glass-panel" style="display: inline-block;">← 返回首頁導覽</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南</p>
+    </footer>
+</body>
+
+</html>

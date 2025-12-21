@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電源供應器 (PSU) - 電腦硬體架構指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 450px;
+            filter: drop-shadow(0 0 20px rgba(255, 200, 0, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .detail-info {
+            flex: 1.5;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 3px solid #ffc800;
+        }
+
+        .info-section h2 {
+            color: #ffc800;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">HardWare.IO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detail-hero">
+            <div class="detail-info">
+                <h1>電源供應器 (PSU)</h1>
+                <p class="subtitle" style="color: var(--text-muted); font-size: 1.2rem;">Power Supply Unit - 電腦的心臟</p>
+            </div>
+            <img src="power supply.png" alt="PSU Image" class="detail-img">
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h2>基本定義</h2>
+                <p>電源供應器負責將插座提供的家用交流電 (AC) 轉換為電腦電子元件所需的低電壓直流電 (DC)。</p>
+            </div>
+
+            <div class="info-section">
+                <h2>功能說明</h2>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li><strong>電壓轉換：</strong> 輸出 +12V (給 CPU/顯卡)、+5V (給 SSD/USB)、+3.3V (給主機板晶片)。</li>
+                    <li><strong>保護機制：</strong> 防止過壓 (OVP)、過流 (OCP)、短路 (SCP) 損壞昂貴的電腦零件。</li>
+                    <li><strong>效率 (80 Plus)：</strong> 金牌、白金牌認證代表轉換效率高，廢熱少，更省電。</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>系統角色與交互關係</h2>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">穩定性的關鍵</h3>
+                        <p>如果 PSU 供電不穩或瓦數不足，電腦在高負載（如玩遊戲）時可能會突然重開機或當機。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="glass-panel" style="display: inline-block;">← 返回首頁導覽</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南</p>
+    </footer>
+</body>
+
+</html>

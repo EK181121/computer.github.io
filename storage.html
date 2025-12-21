@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>硬碟 (Storage) - 電腦硬體架構指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 400px;
+            filter: drop-shadow(0 0 20px rgba(0, 153, 255, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .detail-info {
+            flex: 1.5;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 3px solid #0099ff;
+        }
+
+        .info-section h2 {
+            color: #0099ff;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">HardWare.IO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detail-hero">
+            <div class="detail-info">
+                <h1>硬碟 (Storage)</h1>
+                <p class="subtitle" style="color: var(--text-muted); font-size: 1.2rem;">Data Storage - 資料的長期保險箱</p>
+            </div>
+            <img src="storage.png" alt="Hard Drive Image" class="detail-img">
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h2>基本定義</h2>
+                <p>硬碟負責長期保存您的資料（作業系統、照片、遊戲、文件），即使電腦關機這些資料也不會消失（非揮發性記憶體）。</p>
+            </div>
+
+            <div class="info-section">
+                <h2>功能說明</h2>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li><strong>SSD (固態硬碟)：</strong> 使用快閃記憶體晶片存儲，速度極快，耐震，無噪音。是現代電腦的主流選擇。</li>
+                    <li><strong>HDD (傳統硬碟)：</strong> 使用旋轉的磁盤與讀寫頭，速度較慢，但單位容量成本便宜，適合儲存大量檔案。</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>系統角色與交互關係</h2>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">開機流程</h3>
+                        <p>當您按下開機鍵，BIOS 會通知 CPU 從儲存裝置中載入作業系統 (Windows/macOS) 到 RAM 中執行。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="glass-panel" style="display: inline-block;">← 返回首頁導覽</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南</p>
+    </footer>
+</body>
+
+</html>

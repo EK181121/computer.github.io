@@ -1,0 +1,344 @@
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --primary-color: #00f2ff;
+    --secondary-color: #ff0055;
+    --text-color: #ffffff;
+    --text-muted: #a0a0a0;
+    --card-hover: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 12, 41, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+/* Main Layout */
+main {
+    padding-top: 100px;
+    min-height: calc(100vh - 80px);
+    /* Footer adjustment */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Schematic Editor / Interactive Area */
+.schematic-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 16/9;
+    margin: 0 auto 4rem;
+    border-radius: 20px;
+    overflow: hidden;
+    background: radial-gradient(circle at center, rgba(48, 43, 99, 0.5), transparent);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.component-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    transition: transform 0.5s ease;
+}
+
+/* Floating Component Styles for the Schematic */
+.hardware-component {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.hardware-component:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: drop-shadow(0 0 15px var(--primary-color));
+    z-index: 10;
+}
+
+.component-label {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--primary-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.hardware-component:hover .component-label {
+    opacity: 1;
+}
+
+/* Positioning based on the provided images (approximate) */
+/* We will fine tune these in the HTML with inline styles or specific IDs */
+
+/* Component Detail Cards (Preview) */
+.detail-preview {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 20;
+    pointer-events: none;
+    /* Let clicks pass through if needed, or handle differently */
+}
+
+/* Info Cards Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.feature-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 242, 255, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        display: none;
+        /* Simple mobile hide for now, or hamburger later */
+    }
+
+    .schematic-container {
+        display: none;
+        /* Hide complex schematic on small screens, show list instead */
+    }
+
+    .mobile-component-list {
+        display: block;
+        /* We will create this in HTML */
+    }
+}
+
+/* New Grid Layout Styles */
+.component-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.grid-item {
+    background: var(--glass-bg);
+    border: var(--glass-border);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transform: translateY(100%);
+    transition: 0.5s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.15);
+}
+
+.grid-item:hover::before {
+    transform: translateY(-100%);
+}
+
+.grid-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+.grid-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.grid-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.grid-icon-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 5px var(--primary-color));
+    transition: transform 0.3s;
+}
+
+.grid-item:hover .grid-icon-img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .component-grid {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+    }
+
+    .grid-item[style*="grid-column: span 3"] {
+        grid-column: auto !important;
+        /* Reset span on mobile */
+    }
+}

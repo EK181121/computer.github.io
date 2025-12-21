@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顯示卡 (GPU) - 電腦硬體架構指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .detail-hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 500px;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 85, 0.2));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .detail-info {
+            flex: 1.5;
+        }
+
+        .info-section {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .info-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">HardWare.IO</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="overview.html">架構總覽</a></li>
+                <li><a href="comparison.html">元件比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="detail-hero">
+            <div class="detail-info">
+                <h1>顯示卡 (GPU)</h1>
+                <p class="subtitle" style="color: var(--text-muted); font-size: 1.2rem;">Graphics Processing Unit -
+                    視覺渲染引擎</p>
+            </div>
+            <img src="gpu.png" alt="GPU Image" class="detail-img">
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h2>基本定義</h2>
+                <p>GPU (圖形處理單元) 是一種專門設計用於快速處理和修改記憶體的電子電路，以加速圖像在顯示器上的建立。現代獨立顯示卡通常包含自己的記憶體 (VRAM)。</p>
+            </div>
+
+            <div class="info-section">
+                <h2>功能說明</h2>
+                <ul style="padding-left: 20px; line-height: 1.6;">
+                    <li><strong>3D 渲染：</strong> 處理多邊形、紋理映射、光影計算 (如 Ray Tracing)。</li>
+                    <li><strong>平行運算：</strong> 擁有數千個核心，極其適合處理大量重複的並行任務（如 AI 運算、影片解碼）。</li>
+                    <li><strong>影像輸出：</strong> 將數位訊號轉換為螢幕可顯示的影像。</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>系統角色與交互關係</h2>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">CPU 的畫師</h3>
+                        <p>CPU 告訴 GPU「這裡有個場景，有這些物件」，GPU 負責算出每個像素的顏色。</p>
+                    </div>
+                    <div class="glass-panel" style="flex: 1;">
+                        <h3 style="color: var(--primary-color)">VRAM 的重要性</h3>
+                        <p>GPU 需要在 VRAM 中暫存大量的紋理貼圖。高解析度 (4K) 遊戲需要極大的 VRAM 容量。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin: 4rem 0;">
+            <a href="index.html" class="glass-panel" style="display: inline-block;">← 返回首頁導覽</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 電腦硬體架構指南</p>
+    </footer>
+</body>
+
+</html>
