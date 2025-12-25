@@ -8,58 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .detail-hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
 
-        .detail-img {
-            flex: 1;
-            max-width: 450px;
-            filter: drop-shadow(0 0 20px rgba(255, 200, 0, 0.2));
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .detail-info {
-            flex: 1.5;
-        }
-
-        .info-section {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            border-left: 3px solid #ffc800;
-        }
-
-        .info-section h2 {
-            color: #ffc800;
-            margin-bottom: 1rem;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    </style>
 </head>
 
 <body>
     <header>
         <div class="logo">3D電腦硬體介紹網站</div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">首頁</a></li>
