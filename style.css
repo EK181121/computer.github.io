@@ -218,6 +218,32 @@ footer {
     color: var(--text-muted);
     font-size: 0.9rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(15, 12, 41, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.contact-item i {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 /* Animations */
